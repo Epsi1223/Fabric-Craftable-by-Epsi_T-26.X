@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:slime_ball",
+    "minecraft:lily_pad",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "minecraft:frogspawn"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "D": "minecraft:dragon_breath",
+    "S": "minecraft:sculk"
+  },
+  "pattern": [
+    "SAS",
+    "ADA",
+    "SAS"
+  ],
+  "result": {
+    "id": "minecraft:echo_shard"
+  }
+}

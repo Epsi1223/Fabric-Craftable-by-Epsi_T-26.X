@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:brick",
+    "R": "minecraft:red_dye"
+  },
+  "pattern": [
+    " R ",
+    "RBR",
+    " R "
+  ],
+  "result": {
+    "id": "minecraft:heart_pottery_sherd"
+  }
+}

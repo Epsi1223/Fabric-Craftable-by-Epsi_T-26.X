@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "iron_ingot",
+  "ingredient": "minecraft:chipped_anvil",
+  "result": {
+    "id": "minecraft:iron_block"
+  }
+}

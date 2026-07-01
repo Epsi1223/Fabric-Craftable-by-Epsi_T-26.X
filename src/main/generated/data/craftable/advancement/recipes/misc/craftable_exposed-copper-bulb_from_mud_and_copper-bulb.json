@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_bulb": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_bulb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mud": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:mud"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_exposed-copper-bulb_from_mud_and_copper-bulb"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mud",
+      "has_copper_bulb"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_exposed-copper-bulb_from_mud_and_copper-bulb"
+    ]
+  }
+}

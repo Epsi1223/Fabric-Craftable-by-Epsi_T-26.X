@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:diamond",
+    "P": "minecraft:prismarine_bricks",
+    "S": "minecraft:sea_lantern"
+  },
+  "pattern": [
+    "PSP",
+    "SDS",
+    "PSP"
+  ],
+  "result": {
+    "id": "minecraft:heart_of_the_sea"
+  }
+}

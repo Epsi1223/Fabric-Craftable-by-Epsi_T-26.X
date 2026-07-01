@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "minecraft:end_crystal",
+    "P": "minecraft:phantom_membrane",
+    "R": "minecraft:end_rod"
+  },
+  "pattern": [
+    "PEP",
+    "PRP",
+    "P P"
+  ],
+  "result": {
+    "id": "minecraft:elytra"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:nether_star",
+    "minecraft:carved_pumpkin"
+  ],
+  "result": {
+    "id": "minecraft:player_head"
+  }
+}

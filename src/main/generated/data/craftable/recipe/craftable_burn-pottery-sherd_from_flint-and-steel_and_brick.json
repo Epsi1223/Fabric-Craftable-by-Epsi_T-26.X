@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:brick",
+    "F": "minecraft:flint_and_steel"
+  },
+  "pattern": [
+    " F ",
+    "FBF",
+    " F "
+  ],
+  "result": {
+    "id": "minecraft:burn_pottery_sherd"
+  }
+}

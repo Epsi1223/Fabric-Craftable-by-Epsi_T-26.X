@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:grass_block",
+    "#craftable:mushrooms"
+  ],
+  "result": {
+    "id": "minecraft:mycelium"
+  }
+}

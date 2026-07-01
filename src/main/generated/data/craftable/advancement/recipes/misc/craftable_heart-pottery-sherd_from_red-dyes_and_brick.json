@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_decorated_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:decorated_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_red_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:red_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_heart-pottery-sherd_from_red-dyes_and_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brick",
+      "has_red_dye",
+      "has_decorated_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_heart-pottery-sherd_from_red-dyes_and_brick"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "minecraft:ghast_tear",
+    "O": "minecraft:obsidian"
+  },
+  "pattern": [
+    "GGG",
+    "GOG",
+    "GGG"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:crying_obsidian"
+  }
+}

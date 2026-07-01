@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#craftable:orange_tulip_base",
+    "minecraft:orange_dye"
+  ],
+  "result": {
+    "id": "minecraft:orange_tulip"
+  }
+}

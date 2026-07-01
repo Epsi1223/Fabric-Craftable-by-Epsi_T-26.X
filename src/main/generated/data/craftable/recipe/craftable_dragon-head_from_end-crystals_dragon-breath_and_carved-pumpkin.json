@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:end_crystal",
+    "D": "minecraft:dragon_breath",
+    "P": "minecraft:carved_pumpkin"
+  },
+  "pattern": [
+    "CDC",
+    "DPD",
+    "CDC"
+  ],
+  "result": {
+    "id": "minecraft:dragon_head"
+  }
+}

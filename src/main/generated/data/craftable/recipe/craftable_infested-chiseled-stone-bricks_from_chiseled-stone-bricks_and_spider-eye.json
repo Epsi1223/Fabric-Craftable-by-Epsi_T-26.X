@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:chiseled_stone_bricks",
+    "minecraft:spider_eye"
+  ],
+  "result": {
+    "id": "minecraft:infested_chiseled_stone_bricks"
+  }
+}

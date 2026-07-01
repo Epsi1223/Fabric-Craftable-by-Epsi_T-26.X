@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_decorated_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:decorated_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fermented_spider_eye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fermented_spider_eye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_heartbreak-pottery-sherd_from_fermented-eyes_and_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brick",
+      "has_fermented_spider_eye",
+      "has_decorated_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_heartbreak-pottery-sherd_from_fermented-eyes_and_brick"
+    ]
+  }
+}

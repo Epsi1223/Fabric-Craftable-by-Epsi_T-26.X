@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#craftable:red_tulip_base",
+    "minecraft:red_dye"
+  ],
+  "result": {
+    "id": "minecraft:red_tulip"
+  }
+}

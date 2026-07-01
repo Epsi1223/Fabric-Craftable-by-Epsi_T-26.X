@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "gold_ingot",
+  "ingredient": "minecraft:raw_gold_block",
+  "result": {
+    "id": "minecraft:gold_block"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "minecraft:netherrack",
+    "R": "minecraft:blaze_rod"
+  },
+  "pattern": [
+    "NNN",
+    "NRN",
+    "NNN"
+  ],
+  "result": {
+    "count": 8,
+    "id": "minecraft:magma_block"
+  }
+}

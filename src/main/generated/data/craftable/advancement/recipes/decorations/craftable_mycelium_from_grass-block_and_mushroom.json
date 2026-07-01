@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_grass_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:grass_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_mycelium_from_grass-block_and_mushroom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_grass_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_mycelium_from_grass-block_and_mushroom"
+    ]
+  }
+}

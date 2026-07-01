@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#craftable:saplings",
+    "minecraft:sand"
+  ],
+  "result": {
+    "id": "minecraft:dead_bush"
+  }
+}

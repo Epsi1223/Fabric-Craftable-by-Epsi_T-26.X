@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:deepslate",
+    "minecraft:spider_eye"
+  ],
+  "result": {
+    "id": "minecraft:infested_deepslate"
+  }
+}

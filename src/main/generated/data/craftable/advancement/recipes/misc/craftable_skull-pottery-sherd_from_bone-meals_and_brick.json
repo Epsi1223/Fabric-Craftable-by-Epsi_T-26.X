@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bone_meal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bone_meal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_decorated_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:decorated_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_skull-pottery-sherd_from_bone-meals_and_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brick",
+      "has_bone_meal",
+      "has_decorated_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_skull-pottery-sherd_from_bone-meals_and_brick"
+    ]
+  }
+}

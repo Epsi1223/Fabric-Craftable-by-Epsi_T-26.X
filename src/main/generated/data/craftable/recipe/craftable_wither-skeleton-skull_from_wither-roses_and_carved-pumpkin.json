@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:carved_pumpkin",
+    "R": "minecraft:wither_rose"
+  },
+  "pattern": [
+    "RRR",
+    "RPR",
+    "RRR"
+  ],
+  "result": {
+    "id": "minecraft:wither_skeleton_skull"
+  }
+}

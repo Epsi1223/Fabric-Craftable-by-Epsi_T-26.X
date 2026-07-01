@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:brick",
+    "H": "minecraft:hay_block"
+  },
+  "pattern": [
+    " H ",
+    "HBH",
+    " H "
+  ],
+  "result": {
+    "id": "minecraft:sheaf_pottery_sherd"
+  }
+}

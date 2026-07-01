@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "minecraft:fermented_spider_eye",
+    "P": "minecraft:potato"
+  },
+  "pattern": [
+    "PFP"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:poisonous_potato"
+  }
+}

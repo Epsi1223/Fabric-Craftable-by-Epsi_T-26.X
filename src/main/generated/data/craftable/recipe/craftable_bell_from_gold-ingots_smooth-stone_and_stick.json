@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:smooth_stone",
+    "G": "minecraft:gold_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "ASA",
+    " G ",
+    "GGG"
+  ],
+  "result": {
+    "id": "minecraft:bell"
+  }
+}

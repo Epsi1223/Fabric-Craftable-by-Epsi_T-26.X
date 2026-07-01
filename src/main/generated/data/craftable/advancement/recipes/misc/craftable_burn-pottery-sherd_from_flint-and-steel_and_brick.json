@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_decorated_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:decorated_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_flint_and_steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:flint_and_steel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_burn-pottery-sherd_from_flint-and-steel_and_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brick",
+      "has_flint_and_steel",
+      "has_decorated_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_burn-pottery-sherd_from_flint-and-steel_and_brick"
+    ]
+  }
+}

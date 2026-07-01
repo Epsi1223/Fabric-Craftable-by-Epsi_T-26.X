@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "copper_ingot",
+  "ingredient": "minecraft:raw_copper_block",
+  "result": {
+    "id": "minecraft:copper_block"
+  }
+}

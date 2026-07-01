@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glowstone_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glowstone_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_magma_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:magma_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_ochre-froglight_from_glowstone-dust_yellow-dyes_and_magma-block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:yellow_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glowstone_dust",
+      "has_yellow_dye",
+      "has_magma_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_ochre-froglight_from_glowstone-dust_yellow-dyes_and_magma-block"
+    ]
+  }
+}

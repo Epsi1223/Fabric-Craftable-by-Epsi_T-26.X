@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "minecraft:ender_eye",
+    "G": "minecraft:glass_bottle",
+    "P": "minecraft:ender_pearl"
+  },
+  "pattern": [
+    "EPE",
+    "PGP",
+    "EPE"
+  ],
+  "result": {
+    "id": "minecraft:dragon_breath"
+  }
+}

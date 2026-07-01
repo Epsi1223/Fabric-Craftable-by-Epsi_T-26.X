@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:green_dye",
+    "G": "minecraft:glowstone_dust",
+    "M": "minecraft:magma_block"
+  },
+  "pattern": [
+    "DGD",
+    "GMG",
+    "DGD"
+  ],
+  "result": {
+    "id": "minecraft:verdant_froglight"
+  }
+}

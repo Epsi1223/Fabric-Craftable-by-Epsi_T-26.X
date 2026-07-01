@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:amethyst_block",
+    "N": "minecraft:nether_star"
+  },
+  "pattern": [
+    "AAA",
+    "ANA",
+    "AAA"
+  ],
+  "result": {
+    "id": "minecraft:budding_amethyst"
+  }
+}

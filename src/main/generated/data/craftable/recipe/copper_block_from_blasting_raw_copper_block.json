@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "copper_ingot",
+  "ingredient": "minecraft:raw_copper_block",
+  "result": {
+    "id": "minecraft:copper_block"
+  }
+}

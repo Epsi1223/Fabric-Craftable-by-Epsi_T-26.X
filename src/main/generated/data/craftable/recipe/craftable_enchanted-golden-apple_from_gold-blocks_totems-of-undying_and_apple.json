@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:apple",
+    "G": "minecraft:gold_block",
+    "T": "minecraft:totem_of_undying"
+  },
+  "pattern": [
+    "GTG",
+    "GAG",
+    "GTG"
+  ],
+  "result": {
+    "id": "minecraft:enchanted_golden_apple"
+  }
+}

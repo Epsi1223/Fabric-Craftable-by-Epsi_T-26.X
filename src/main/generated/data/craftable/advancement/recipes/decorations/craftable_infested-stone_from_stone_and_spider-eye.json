@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spider_eye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:spider_eye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_infested-stone_from_stone_and_spider-eye"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stone",
+      "has_spider_eye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_infested-stone_from_stone_and_spider-eye"
+    ]
+  }
+}

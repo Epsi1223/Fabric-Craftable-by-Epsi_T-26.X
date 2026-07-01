@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:splash_potion",
+    "minecraft:dragon_breath"
+  ],
+  "result": {
+    "id": "minecraft:experience_bottle"
+  }
+}
