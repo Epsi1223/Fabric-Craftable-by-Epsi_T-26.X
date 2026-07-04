@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:chiseled_deepslate",
+    "E": "minecraft:echo_shard",
+    "S": "minecraft:netherite_scrap"
+  },
+  "pattern": [
+    "SES",
+    "EDE",
+    "SES"
+  ],
+  "result": {
+    "id": "minecraft:reinforced_deepslate"
+  }
+}

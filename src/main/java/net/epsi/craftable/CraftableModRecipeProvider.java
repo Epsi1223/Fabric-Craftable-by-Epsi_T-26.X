@@ -1,7 +1,9 @@
 /* Hi!
  *
  *
- * NOTE: The recipe registration here is currently in a transition phase. (the code is not fully organized)
+ * NOTE: The recipe categories may be confusing, and there may be typos especially in the IDs.
+ * Also, as for now there's only one helper method,
+ * because I want the code to be easier to read for people who are unfamiliar with Java.
  * If you are looking for a specific recipe, please use Ctrl+F / Cmd+F
  * to search for the item name.
  *
@@ -81,34 +83,105 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 shaped(RecipeCategory.FOOD, Items.ENCHANTED_GOLDEN_APPLE, 1)
                         .pattern("GTG")
                         .pattern("GAG")
-                        .pattern("GTG")
+                        .pattern("GDG")
                         .define('G', Items.GOLD_BLOCK)
                         .define('A', Items.APPLE)
                         .define('T', Items.TOTEM_OF_UNDYING)
+                        .define('D', Items.DRAGON_BREATH)
                         .unlockedBy(getHasName(Items.APPLE), has(Items.APPLE))
                         .unlockedBy(getHasName(Items.GOLD_BLOCK), has(Items.GOLD_BLOCK))
                         .unlockedBy(getHasName(Items.TOTEM_OF_UNDYING), has(Items.TOTEM_OF_UNDYING))
-                        .save(output, "craftable_enchanted-golden-apple_from_gold-blocks_totems-of-undying_and_apple");
+                        .unlockedBy(getHasName(Items.DRAGON_BREATH), has(Items.DRAGON_BREATH))
+                        .save(output, "craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_apple");
+                shaped(RecipeCategory.FOOD, Items.POISONOUS_POTATO, 2)
+                        .pattern("PFP")
+                        .define('P', Items.POTATO)
+                        .define('F', Items.FERMENTED_SPIDER_EYE)
+                        .unlockedBy(getHasName(Items.POTATO), has(Items.POTATO))
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
+                        .save(output, "craftable_poisonous-potato_from_potatoes_and_fermented-spider-eye");
+                shapeless(RecipeCategory.FOOD, Items.GLOW_BERRIES, 1)
+                        .requires(Items.SWEET_BERRIES)
+                        .requires(Items.GLOWSTONE_DUST)
+                        .unlockedBy(getHasName(Items.SWEET_BERRIES), has(Items.SWEET_BERRIES))
+                        .unlockedBy(getHasName(Items.GLOWSTONE_DUST), has(Items.GLOWSTONE_DUST))
+                        .save(output, "craftable_glow-berries_from_sweet-berries_and_glowstone-dust");
             }
             private void buildComponentRecipes() {
-                shaped(RecipeCategory.MISC, Items.GUNPOWDER, 4)
+                shaped(RecipeCategory.MISC, Items.GUNPOWDER, 3)
                         .pattern("BSB")
-                        .pattern("CMC")
+                        .pattern("SMS")
                         .pattern("BSB")
                         .define('S', Items.SAND)
-                        .define('C', Items.CHARCOAL)
                         .define('M', Items.MAGMA_BLOCK)
                         .define('B', Items.BLAZE_ROD)
                         .unlockedBy(getHasName(Items.SAND), has(Items.SAND))
-                        .unlockedBy(getHasName(Items.CHARCOAL), has(Items.CHARCOAL))
                         .unlockedBy(getHasName(Items.MAGMA_BLOCK), has(Items.MAGMA_BLOCK))
                         .unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
-                        .save(output, "craftable_gunpowder_from_sand_blaze-rods_charcoal_and_magma");
+                        .save(output, "craftable_gunpowder_from_sand_blaze-rods_and_magma");
+                shaped(RecipeCategory.MISC, Items.SHULKER_SHELL, 1)
+                        .pattern("OCO")
+                        .pattern("CDC")
+                        .define('O', Items.OBSIDIAN)
+                        .define('D', Items.DIAMOND)
+                        .define('C', Items.CHORUS_FRUIT)
+                        .unlockedBy(getHasName(Items.OBSIDIAN), has(Items.OBSIDIAN))
+                        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                        .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
+                        .save(output, "craftable_shulker-shell_from_obsidian_diamond_and_chorus-fruit");
+                shaped(RecipeCategory.MISC, Items.ECHO_SHARD, 1)
+                        .pattern("SAS")
+                        .pattern("ADA")
+                        .pattern("SAS")
+                        .define('S', Items.SCULK)
+                        .define('A', Items.AMETHYST_SHARD)
+                        .define('D', Items.DRAGON_BREATH)
+                        .unlockedBy(getHasName(Items.SCULK), has(Items.SCULK))
+                        .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                        .unlockedBy(getHasName(Items.DRAGON_BREATH), has(Items.DRAGON_BREATH))
+                        .save(output, "craftable_echo-shard_from_sculks_amethyst-shards_and_dragon-breath");
+                shaped(RecipeCategory.MISC, Items.DRAGON_BREATH, 1)
+                        .pattern("EPE")
+                        .pattern("PGP")
+                        .pattern("EPE")
+                        .define('E', Items.ENDER_EYE)
+                        .define('G', Items.GLASS_BOTTLE)
+                        .define('P', Items.ENDER_PEARL)
+                        .unlockedBy(getHasName(Items.ENDER_EYE), has(Items.ENDER_EYE))
+                        .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
+                        .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
+                        .save(output, "craftable_dragon-breath_from_ender-eyes_ender-pearls_and_glass-bottle");
+                shaped(RecipeCategory.MISC, Items.HEART_OF_THE_SEA, 1)
+                        .pattern("PSP")
+                        .pattern("SDS")
+                        .pattern("PSP")
+                        .define('S', Items.SEA_LANTERN)
+                        .define('P', Items.PRISMARINE_BRICKS)
+                        .define('D', Items.DIAMOND)
+                        .unlockedBy(getHasName(Items.SEA_LANTERN), has(Items.SEA_LANTERN))
+                        .unlockedBy(getHasName(Items.PRISMARINE_BRICKS), has(Items.PRISMARINE_BRICKS))
+                        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                        .save(output, "craftable_heart-of-the-sea_from_sea-lanterns_prismarine-bricks_and_diamond");
+                shapeless(RecipeCategory.MISC, Items.GLOW_INK_SAC, 1)
+                        .requires(Items.INK_SAC)
+                        .requires(Items.GLOWSTONE_DUST)
+                        .unlockedBy(getHasName(Items.INK_SAC), has(Items.INK_SAC))
+                        .unlockedBy(getHasName(Items.GLOWSTONE_DUST), has(Items.GLOWSTONE_DUST))
+                        .save(output, "craftable_glow-ink-sac_from_ink-sac_and_glowstone-dust");
+                shapeless(RecipeCategory.MISC, Items.GLOWSTONE_DUST, 1)
+                        .requires(Items.GLOW_BERRIES, 2)
+                        .unlockedBy(getHasName(Items.GLOW_BERRIES), has(Items.GLOW_BERRIES))
+                        .save(output, "craftable_glowstone-dust_from_glow-berries");
+                shapeless(RecipeCategory.MISC, Items.STRING, 4)
+                        .requires(Items.WHITE_WOOL)
+                        .unlockedBy(getHasName(Items.WHITE_WOOL), has(Items.WHITE_WOOL))
+                        .save(output, "craftable_strings_from_white-wool");
             }
             private void buildDecorativeBlockRecipes() {
                 shaped(RecipeCategory.DECORATIONS, Items.COBWEB, 1)
-                        .pattern("SS")
-                        .pattern("SS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
                         .define('S', Items.STRING)
                         .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
                         .save(output, "craftable_cobweb_from_strings");
@@ -141,6 +214,109 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
                         .unlockedBy(getHasName(Items.DIRT), has(Items.DIRT))
                         .save(output, "craftable_dirt-path_from_wheat_and_dirt");
+                shaped(RecipeCategory.DECORATIONS, Items.SPONGE, 1)
+                        .pattern("SSS")
+                        .pattern("SWS")
+                        .pattern("SSS")
+                        .define('S', Items.SLIME_BALL)
+                        .define('W', Items.YELLOW_WOOL)
+                        .unlockedBy(getHasName(Items.SLIME_BALL), has(Items.SLIME_BALL))
+                        .unlockedBy(getHasName(Items.YELLOW_WOOL), has(Items.YELLOW_WOOL))
+                        .save(output, "craftable_sponge_from_slime-balls_and_yellow-wool");
+                shaped(RecipeCategory.DECORATIONS, Items.CRYING_OBSIDIAN, 1)
+                        .pattern(" G ")
+                        .pattern("GOG")
+                        .pattern(" G ")
+                        .define('G', Items.GHAST_TEAR)
+                        .define('O', Items.OBSIDIAN)
+                        .unlockedBy(getHasName(Items.OBSIDIAN), has(Items.OBSIDIAN))
+                        .unlockedBy(getHasName(Items.GHAST_TEAR), has(Items.GHAST_TEAR))
+                        .save(output, "craftable_crying-obsidian_from_obsidian_and_ghast-tears");
+                shaped(RecipeCategory.MISC, Items.TUFF, 8)
+                        .pattern("CCC")
+                        .pattern("CDC")
+                        .pattern("CCC")
+                        .define('C', Items.COBBLESTONE)
+                        .define('D', Items.DEEPSLATE)
+                        .unlockedBy(getHasName(Items.DEEPSLATE), has(Items.DEEPSLATE))
+                        .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
+                        .save(output, "craftable_tuff_from_cobblestones_and_deepslate");
+                shaped(RecipeCategory.MISC, Items.MAGMA_BLOCK, 8)
+                        .pattern("NNN")
+                        .pattern("NRN")
+                        .pattern("NNN")
+                        .define('R', Items.BLAZE_ROD)
+                        .define('N', Items.NETHERRACK)
+                        .unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
+                        .unlockedBy(getHasName(Items.NETHERRACK), has(Items.NETHERRACK))
+                        .save(output, "craftable_magma-block_from_blaze-rod_and_netherracks");
+                shapeless(RecipeCategory.MISC, Items.GRAVEL, 1)
+                        .requires(Items.COBBLESTONE)
+                        .requires(Items.FLINT)
+                        .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
+                        .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
+                        .save(output, "craftable_gravel_from_cobblestone_and_flint");
+                shapeless(RecipeCategory.MISC, Items.RED_SAND, 1)
+                        .requires(Items.SAND)
+                        .requires(Items.RED_DYE)
+                        .unlockedBy(getHasName(Items.SAND), has(Items.SAND))
+                        .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
+                        .save(output, "craftable_red-sand_from_sand_and_red-dye");
+                shapeless(RecipeCategory.MISC, Items.ROOTED_DIRT, 1)
+                        .requires(Items.GRASS_BLOCK)
+                        .requires(Items.HANGING_ROOTS)
+                        .unlockedBy(getHasName(Items.GRASS_BLOCK), has(Items.GRASS_BLOCK))
+                        .unlockedBy(getHasName(Items.HANGING_ROOTS), has(Items.HANGING_ROOTS))
+                        .save(output, "craftable_rooted-dirt_from_grass-block_and_hanging-roots");
+                shapeless(RecipeCategory.DECORATIONS, Items.CALCITE, 1)
+                        .requires(Items.DIORITE)
+                        .requires(Items.BONE_MEAL)
+                        .unlockedBy(getHasName(Items.DIORITE), has(Items.DIORITE))
+                        .unlockedBy(getHasName(Items.BONE_MEAL), has(Items.BONE_MEAL))
+                        .save(output, "craftable_calcite_from_diorite_and_bone-meal");
+                shapeless(RecipeCategory.DECORATIONS, Items.WET_SPONGE, 1)
+                        .requires(Items.SPONGE)
+                        .requires(Items.WATER_BUCKET)
+                        .unlockedBy(getHasName(Items.SPONGE), has(Items.SPONGE))
+                        .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
+                        .save(output, "craftable_wet-sponge_from_sponge_and_water-bucket");
+                shapeless(RecipeCategory.DECORATIONS, Items.GILDED_BLACKSTONE, 1)
+                        .requires(Items.BLACKSTONE)
+                        .requires(Items.GOLD_NUGGET)
+                        .unlockedBy(getHasName(Items.BLACKSTONE), has(Items.BLACKSTONE))
+                        .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
+                        .save(output, "craftable_gilded-blackstone_from_blackstone_and_gold-nugget");
+                shapeless(RecipeCategory.DECORATIONS, Items.MYCELIUM, 1)
+                        .requires(Items.GRASS_BLOCK)
+                        .requires(CraftableTags.MUSHROOMS)
+                        .unlockedBy(getHasName(Items.GRASS_BLOCK), has(Items.GRASS_BLOCK))
+                        .save(output, "craftable_mycelium_from_grass-block_and_mushroom");
+                shapeless(RecipeCategory.DECORATIONS, Items.PODZOL, 1)
+                        .requires(Items.GRASS_BLOCK)
+                        .requires(Items.DARK_OAK_SAPLING)
+                        .unlockedBy(getHasName(Items.DARK_OAK_SAPLING), has(Items.DARK_OAK_SAPLING))
+                        .unlockedBy(getHasName(Items.GRASS_BLOCK), has(Items.GRASS_BLOCK))
+                        .save(output, "craftable_podzol_from_grass-block_and_dark-oak-sapling");
+                shaped(RecipeCategory.DECORATIONS, Items.REINFORCED_DEEPSLATE, 1)
+                        .pattern("SES")
+                        .pattern("EDE")
+                        .pattern("SES")
+                        .define('S', Items.NETHERITE_SCRAP)
+                        .define('D', Items.CHISELED_DEEPSLATE)
+                        .define('E', Items.ECHO_SHARD)
+                        .unlockedBy(getHasName(Items.NETHERITE_SCRAP), has(Items.NETHERITE_SCRAP))
+                        .unlockedBy(getHasName(Items.CHISELED_DEEPSLATE), has(Items.CHISELED_DEEPSLATE))
+                        .unlockedBy(getHasName(Items.ECHO_SHARD), has(Items.ECHO_SHARD))
+                        .save(output, "craftable_reinforced-deepslate_from_netherite-scraps_echo-shards_and_chiseled-deepslate");
+                shaped(RecipeCategory.DECORATIONS, Items.ICE, 8)
+                        .pattern("SSS")
+                        .pattern("SWS")
+                        .pattern("SSS")
+                        .define('S', Items.SNOW_BLOCK)
+                        .define('W', Items.WATER_BUCKET)
+                        .unlockedBy(getHasName(Items.SNOW_BLOCK), has(Items.SNOW_BLOCK))
+                        .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
+                        .save(output, "craftable_ice_from_snow-blocks_and_water-bucket");
             }
             private void buildCombatRecipes() {
                 shaped(RecipeCategory.COMBAT, Items.TRIDENT, 1)
@@ -163,8 +339,19 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
                         .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
                         .save(output, "craftable_totem-of-undying_from_gold-blocks_emeralds_and_nether-star");
+                shaped(RecipeCategory.MISC, Items.ELYTRA, 1)
+                        .pattern("PEP")
+                        .pattern("PRP")
+                        .pattern("P P")
+                        .define('R', Items.END_ROD)
+                        .define('P', Items.PHANTOM_MEMBRANE)
+                        .define('E', Items.END_CRYSTAL)
+                        .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE), has(Items.PHANTOM_MEMBRANE))
+                        .unlockedBy(getHasName(Items.END_CRYSTAL), has(Items.END_CRYSTAL))
+                        .unlockedBy(getHasName(Items.END_ROD), has(Items.END_ROD))
+                        .save(output, "craftable_elytra_from_end-crystal_phantom-membranes_and_end-rod");
             }
-            private void amethystRecipes() {
+            private void buildAmethystRecipes() {
                 shaped(RecipeCategory.COMBAT, Items.BUDDING_AMETHYST, 1)
                         .pattern("AAA")
                         .pattern("ANA")
@@ -175,26 +362,7 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
                         .save(output, "craftable_budding-amethyst_from_amethyst-block_and_nether-star");
             }
-            @Override
-            public void buildRecipes() {
-                buildChainmailRecipes();
-                buildFoodRecipes();
-                buildComponentRecipes();
-                buildDecorativeBlockRecipes();
-                buildCombatRecipes();
-                amethystRecipes();
-
-                shaped(RecipeCategory.MISC, Items.SHULKER_SHELL, 1)
-                        .pattern("OCO")
-                        .pattern("CDC")
-                        .define('O', Items.OBSIDIAN)
-                        .define('D', Items.DIAMOND)
-                        .define('C', Items.CHORUS_FRUIT)
-                        .unlockedBy(getHasName(Items.OBSIDIAN), has(Items.OBSIDIAN))
-                        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
-                        .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
-                        .save(output, "craftable_shulker-shell_from_obsidian_diamond_and_chorus-fruit");
-                //Corals
+            private void buildCoralRecipes() {
                 shaped(RecipeCategory.DECORATIONS, Items.BRAIN_CORAL_BLOCK, 1)
                         .pattern("CC")
                         .pattern("CC")
@@ -255,43 +423,8 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .define('C', Items.DEAD_TUBE_CORAL_FAN)
                         .unlockedBy(getHasName(Items.DEAD_TUBE_CORAL_FAN), has(Items.DEAD_TUBE_CORAL_FAN))
                         .save(output, "craftable_dead-tube-coral-block_from_dead-tube-coral-fan");
-                //---End of Corals---
-                shaped(RecipeCategory.MISC, Items.ELYTRA, 1)
-                        .pattern("PEP")
-                        .pattern("PRP")
-                        .pattern("P P")
-                        .define('R', Items.END_ROD)
-                        .define('P', Items.PHANTOM_MEMBRANE)
-                        .define('E', Items.END_CRYSTAL)
-                        .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE), has(Items.PHANTOM_MEMBRANE))
-                        .unlockedBy(getHasName(Items.END_CRYSTAL), has(Items.END_CRYSTAL))
-                        .unlockedBy(getHasName(Items.END_ROD), has(Items.END_ROD))
-                        .save(output, "craftable_elytra_from_end-crystal_phantom-membranes_and_end-rod");
-                shaped(RecipeCategory.FOOD, Items.POISONOUS_POTATO, 2)
-                        .pattern("PFP")
-                        .define('P', Items.POTATO)
-                        .define('F', Items.FERMENTED_SPIDER_EYE)
-                        .unlockedBy(getHasName(Items.POTATO), has(Items.POTATO))
-                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
-                        .save(output, "craftable_poisonous-potato_from_potatoes_and_fermented-spider-eye");
-                shaped(RecipeCategory.DECORATIONS, Items.SPONGE, 1)
-                        .pattern("SSS")
-                        .pattern("SWS")
-                        .pattern("SSS")
-                        .define('S', Items.SLIME_BALL)
-                        .define('W', Items.YELLOW_WOOL)
-                        .unlockedBy(getHasName(Items.SLIME_BALL), has(Items.SLIME_BALL))
-                        .unlockedBy(getHasName(Items.YELLOW_WOOL), has(Items.YELLOW_WOOL))
-                        .save(output, "craftable_sponge_from_slime-balls_and_yellow-wool"); //WET_SPONGE recipe is in the "shapeless" recipes
-                shaped(RecipeCategory.DECORATIONS, Items.CRYING_OBSIDIAN, 4)
-                        .pattern("GGG")
-                        .pattern("GOG")
-                        .pattern("GGG")
-                        .define('G', Items.GHAST_TEAR)
-                        .define('O', Items.OBSIDIAN)
-                        .unlockedBy(getHasName(Items.OBSIDIAN), has(Items.OBSIDIAN))
-                        .unlockedBy(getHasName(Items.GHAST_TEAR), has(Items.GHAST_TEAR))
-                        .save(output, "craftable_crying-obsidian_from_obsidian_and_ghast-tears");
+            }
+            private void buildFroglightRecipes() {
                 shaped(RecipeCategory.DECORATIONS, Items.OCHRE_FROGLIGHT, 1)
                         .pattern("DGD")
                         .pattern("GMG")
@@ -325,7 +458,8 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.PURPLE_DYE), has(Items.PURPLE_DYE))
                         .unlockedBy(getHasName(Items.MAGMA_BLOCK), has(Items.MAGMA_BLOCK))
                         .save(output, "craftable_pearlescent-froglight_from_glowstone-dust_purple-dyes_and_magma-block");
-                //Music Discs
+            }
+            private void buildMusicDiscs() {
                 plusRecipeMaker(Items.BONE, Items.NOTE_BLOCK, Items.MUSIC_DISC_13, "craftable_disc-13_from_bones_and_note-block");
                 plusRecipeMaker(Items.COD, Items.NOTE_BLOCK, Items.MUSIC_DISC_CAT, "craftable_disc-cat_from_cods_and_note-block");
                 plusRecipeMaker(Items.SMOOTH_STONE, Items.NOTE_BLOCK, Items.MUSIC_DISC_BLOCKS, "craftable_disc-blocks_from_smooth-stones_and_note-block");
@@ -346,8 +480,9 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 plusRecipeMaker(Items.COPPER_BLOCK, Items.NOTE_BLOCK, Items.MUSIC_DISC_PRECIPICE, "craftable_disc-precipice_from_copper-blocks_and_note-block");
                 plusRecipeMaker(Items.GHAST_TEAR, Items.NOTE_BLOCK, Items.MUSIC_DISC_TEARS, "craftable_disc-tears_from_ghast-tears_and_note-block");
                 plusRecipeMaker(Items.COOKED_CHICKEN, Items.NOTE_BLOCK, Items.MUSIC_DISC_LAVA_CHICKEN, "craftable_disc-lava-chicken_from_cooked_chicken_and_note-block");
-                //---End of Music Discs---
-                //Heads
+
+            }
+            private void buildHeadRecipes() {
                 shaped(RecipeCategory.DECORATIONS, Items.SKELETON_SKULL, 1)
                         .pattern("BBB")
                         .pattern("BPB")
@@ -404,30 +539,14 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.END_CRYSTAL), has(Items.END_CRYSTAL))
                         .unlockedBy(getHasName(Items.DRAGON_BREATH), has(Items.DRAGON_BREATH))
                         .save(output, "craftable_dragon-head_from_end-crystals_dragon-breath_and_carved-pumpkin");
-                //---End of Heads--- (continuation is in the "shapeless" recipes)
-                shaped(RecipeCategory.MISC, Items.ECHO_SHARD, 1)
-                        .pattern("SAS")
-                        .pattern("ADA")
-                        .pattern("SAS")
-                        .define('S', Items.SCULK)
-                        .define('A', Items.AMETHYST_SHARD)
-                        .define('D', Items.DRAGON_BREATH)
-                        .unlockedBy(getHasName(Items.SCULK), has(Items.SCULK))
-                        .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
-                        .unlockedBy(getHasName(Items.DRAGON_BREATH), has(Items.DRAGON_BREATH))
-                        .save(output, "craftable_echo-shard_from_sculks_amethyst-shards_and_dragon-breath");
-                shaped(RecipeCategory.MISC, Items.DRAGON_BREATH, 1)
-                        .pattern("EPE")
-                        .pattern("PGP")
-                        .pattern("EPE")
-                        .define('E', Items.ENDER_EYE)
-                        .define('G', Items.GLASS_BOTTLE)
-                        .define('P', Items.ENDER_PEARL)
-                        .unlockedBy(getHasName(Items.ENDER_EYE), has(Items.ENDER_EYE))
-                        .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
-                        .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
-                        .save(output, "craftable_dragon-breath_from_ender-eyes_ender-pearls_and_glass-bottle");
-                //Sherds
+                shapeless(RecipeCategory.DECORATIONS, Items.PLAYER_HEAD, 1)
+                        .requires(Items.NETHER_STAR)
+                        .requires(Items.CARVED_PUMPKIN)
+                        .unlockedBy(getHasName(Items.CARVED_PUMPKIN), has(Items.CARVED_PUMPKIN))
+                        .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
+                        .save(output, "craftable_player-head_from_nether-star_and_carved-pumpkin");
+            }
+            private void buildSherdRecipes() {
                 shaped(RecipeCategory.MISC, Items.ANGLER_POTTERY_SHERD, 1)
                         .pattern(" C ")
                         .pattern("CBC")
@@ -616,7 +735,7 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .define('B', Items.BRICK)
                         .unlockedBy(getHasName(Items.BRICK), has(Items.BRICK))
                         .unlockedBy(getHasName(Items.DECORATED_POT), has(Items.DECORATED_POT))
-                        .save(output, "craftable_shelter-pottery-sherd_from_saplings_and_brick");
+                        .save(output, "craftable_shelter-pottery-sherd_from_oak-planks_and_brick");
                 shaped(RecipeCategory.MISC, Items.SKULL_POTTERY_SHERD, 1)
                         .pattern(" A ")
                         .pattern("ABA")
@@ -636,7 +755,7 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.BRICK), has(Items.BRICK))
                         .unlockedBy(getHasName(Items.COPPER_AXE), has(Items.COPPER_AXE))
                         .unlockedBy(getHasName(Items.DECORATED_POT), has(Items.DECORATED_POT))
-                        .save(output, "craftable_skull-pottery-sherd_from_copper-axes_and_brick");
+                        .save(output, "craftable_scrape-pottery-sherd_from_copper-axes_and_brick");
                 shaped(RecipeCategory.MISC, Items.SNORT_POTTERY_SHERD, 1)
                         .pattern(" T ")
                         .pattern("TBT")
@@ -657,37 +776,8 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.HAY_BLOCK), has(Items.HAY_BLOCK))
                         .unlockedBy(getHasName(Items.DECORATED_POT), has(Items.DECORATED_POT))
                         .save(output, "craftable_sheaf-pottery-sherd_from_hay-blocks_and_brick");
-                //---End of Pottery Sherds---
-                shaped(RecipeCategory.MISC, Items.HEART_OF_THE_SEA, 1)
-                        .pattern("PSP")
-                        .pattern("SDS")
-                        .pattern("PSP")
-                        .define('S', Items.SEA_LANTERN)
-                        .define('P', Items.PRISMARINE_BRICKS)
-                        .define('D', Items.DIAMOND)
-                        .unlockedBy(getHasName(Items.SEA_LANTERN), has(Items.SEA_LANTERN))
-                        .unlockedBy(getHasName(Items.PRISMARINE_BRICKS), has(Items.PRISMARINE_BRICKS))
-                        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
-                        .save(output, "craftable_heart-of-the-sea_from_sea-lanterns_prismarine-bricks_and_diamond");
-                shaped(RecipeCategory.MISC, Items.TUFF, 8)
-                        .pattern("CCC")
-                        .pattern("CDC")
-                        .pattern("CCC")
-                        .define('C', Items.COBBLESTONE)
-                        .define('D', Items.DEEPSLATE)
-                        .unlockedBy(getHasName(Items.DEEPSLATE), has(Items.DEEPSLATE))
-                        .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
-                        .save(output, "craftable_tuff_from_cobblestones_and_deepslate");
-                shaped(RecipeCategory.MISC, Items.MAGMA_BLOCK, 8)
-                        .pattern("NNN")
-                        .pattern("NRN")
-                        .pattern("NNN")
-                        .define('R', Items.BLAZE_ROD)
-                        .define('N', Items.NETHERRACK)
-                        .unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
-                        .unlockedBy(getHasName(Items.NETHERRACK), has(Items.NETHERRACK))
-                        .save(output, "craftable_magma-block_from_blaze-rod_and_netherracks");
-                //Horse Armors
+            }
+            private void buildHorseArmorRecipes() {
                 shaped(RecipeCategory.COMBAT, Items.COPPER_HORSE_ARMOR, 1)
                         .pattern("  C")
                         .pattern("CCC")
@@ -716,10 +806,9 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .define('D', Items.DIAMOND)
                         .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
                         .save(output, "craftable_diamond-horse-armor_from_diamonds");
-                //---End of Horse Armors--- (continuation in "Smithing" recipes)
-
-                //Copper Things
-                //Exposed
+            }
+            private void buildCopperItemRecipes() {
+                //Exposed:
                 plusRecipeMaker(Items.MUD, Items.COPPER_BLOCK, Items.EXPOSED_COPPER, "craftable_exposed-copper-block_from_mud_and_copper-block");
                 plusRecipeMaker(Items.MUD, Items.COPPER_BULB, Items.EXPOSED_COPPER_BULB, "craftable_exposed-copper-bulb_from_mud_and_copper-bulb");
                 plusRecipeMaker(Items.MUD, Items.COPPER_CHEST, Items.EXPOSED_COPPER_CHEST, "craftable_exposed-copper-chest_from_mud_and_copper-chest");
@@ -732,8 +821,7 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 plusRecipeMaker(Items.MUD, Items.CHISELED_COPPER, Items.EXPOSED_CHISELED_COPPER, "craftable_exposed-chiseled-copper_from_mud_and_chiseled-copper");
                 plusRecipeMaker(Items.MUD, Items.LIGHTNING_ROD, Items.EXPOSED_LIGHTNING_ROD, "craftable_exposed-lightning-rod_from_mud_and_lightning-rod");
                 plusRecipeMaker(Items.MUD, Items.CUT_COPPER, Items.EXPOSED_CUT_COPPER, "craftable_exposed-cut-copper_from_mud_and_cut-copper");
-                //---End of Exposed---
-                //Weathered
+                //Weathered:
                 plusRecipeMaker(Items.VINE, Items.EXPOSED_COPPER, Items.WEATHERED_COPPER, "craftable_weathered-copper-block_from_vines_and_exposed-copper-block");
                 plusRecipeMaker(Items.VINE, Items.EXPOSED_COPPER_BULB, Items.WEATHERED_COPPER_BULB, "craftable_weathered-copper-bulb_from_vines_and_exposed-copper-bulb");
                 plusRecipeMaker(Items.VINE, Items.EXPOSED_COPPER_CHEST, Items.WEATHERED_COPPER_CHEST, "craftable_weathered-copper-chest_from_vines_and_exposed-copper-chest");
@@ -746,8 +834,7 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 plusRecipeMaker(Items.VINE, Items.EXPOSED_CHISELED_COPPER, Items.WEATHERED_CHISELED_COPPER, "craftable_weathered-chiseled-copper_from_vines_and_exposed-chiseled-copper");
                 plusRecipeMaker(Items.VINE, Items.EXPOSED_LIGHTNING_ROD, Items.WEATHERED_LIGHTNING_ROD, "craftable_weathered-lightning-rod_from_vines_and_exposed-lightning-rod");
                 plusRecipeMaker(Items.VINE, Items.EXPOSED_CUT_COPPER, Items.WEATHERED_CUT_COPPER, "craftable_weathered-cut-copper_from_vines_and_exposed-cut-copper");
-                //---End of Weathered---
-                //Oxidized
+                //Oxidized:
                 plusRecipeMaker(Items.MOSS_BLOCK, Items.WEATHERED_COPPER, Items.OXIDIZED_COPPER, "craftable_oxidized-copper-block_from_moss-blocks_and_weathered-copper-block");
                 plusRecipeMaker(Items.MOSS_BLOCK, Items.WEATHERED_COPPER_BULB, Items.OXIDIZED_COPPER_BULB, "craftable_oxidized-copper-bulb_from_moss-blocks_and_weathered-copper-bulb");
                 plusRecipeMaker(Items.MOSS_BLOCK, Items.WEATHERED_COPPER_CHEST, Items.OXIDIZED_COPPER_CHEST, "craftable_oxidized-copper-chest_from_moss-blocks_and_weathered-copper-chest");
@@ -760,9 +847,8 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 plusRecipeMaker(Items.MOSS_BLOCK, Items.WEATHERED_CHISELED_COPPER, Items.OXIDIZED_CHISELED_COPPER, "craftable_oxidized-chiseled-copper_from_moss-blocks_and_weathered-chiseled-copper");
                 plusRecipeMaker(Items.MOSS_BLOCK, Items.WEATHERED_LIGHTNING_ROD, Items.OXIDIZED_LIGHTNING_ROD, "craftable_oxidized-lightning-rod_from_moss-blocks_and_weathered-lightning-rod");
                 plusRecipeMaker(Items.MOSS_BLOCK, Items.WEATHERED_CUT_COPPER, Items.OXIDIZED_CUT_COPPER, "craftable_oxidized-cut-copper_from_moss-blocks_and_weathered-cut-copper");
-                //---End of Oxidized---
-                //---End of Copper Things---
-                //Mushrooms
+            }
+            private void buildMushroomItemRecipes() {
                 shaped(RecipeCategory.DECORATIONS, Items.BROWN_MUSHROOM_BLOCK, 1)
                         .pattern("BB")
                         .pattern("BB")
@@ -793,14 +879,8 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.GLOWSTONE_DUST), has(Items.GLOWSTONE_DUST))
                         .unlockedBy(getHasName(Items.MUSHROOM_STEM), has(Items.MUSHROOM_STEM))
                         .save(output, "craftable_shroomlight_from_glowstone-dust_and_mushroom-stem");
-                //---End of Mushrooms---
-                //Shapeless Crafting Recipes
-                shapeless(RecipeCategory.DECORATIONS, Items.PLAYER_HEAD, 1)
-                        .requires(Items.NETHER_STAR)
-                        .requires(Items.CARVED_PUMPKIN)
-                        .unlockedBy(getHasName(Items.CARVED_PUMPKIN), has(Items.CARVED_PUMPKIN))
-                        .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
-                        .save(output, "craftable_player-head_from_nether-star_and_carved-pumpkin");
+            }
+            private void buildSmallDecorativeItemRecipes() { //By "Small Decorative Item" I mean "blocks" (because technically they aren't blocks) that are smaller than a regular block (don't fully cover the given space), and some of them can be placed multiple times in the same place.
                 shapeless(RecipeCategory.DECORATIONS, Items.DEAD_BUSH, 1)
                         .requires(CraftableTags.SAPLINGS)
                         .requires(Items.SAND)
@@ -853,26 +933,20 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.SLIME_BALL), has(Items.SLIME_BALL))
                         .unlockedBy(getHasName(Items.LILY_PAD), has(Items.LILY_PAD))
                         .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
-                        .save(output, "craftable_frogspawn_from_slime-ball_lily-pad_and_water-bucket"); //Froglights is in the shaped recipes
-                shapeless(RecipeCategory.MISC, Items.GRAVEL, 1)
-                        .requires(Items.COBBLESTONE)
-                        .requires(Items.FLINT)
-                        .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
-                        .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
-                        .save(output, "craftable_gravel_from_cobblestone_and_flint");
-                shapeless(RecipeCategory.MISC, Items.RED_SAND, 1)
-                        .requires(Items.SAND)
-                        .requires(Items.RED_DYE)
-                        .unlockedBy(getHasName(Items.SAND), has(Items.SAND))
-                        .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
-                        .save(output, "craftable_red-sand_from_sand_and_red-dye");
-                shapeless(RecipeCategory.MISC, Items.ROOTED_DIRT, 1)
-                        .requires(Items.GRASS_BLOCK)
-                        .requires(Items.HANGING_ROOTS)
-                        .unlockedBy(getHasName(Items.GRASS_BLOCK), has(Items.GRASS_BLOCK))
-                        .unlockedBy(getHasName(Items.HANGING_ROOTS), has(Items.HANGING_ROOTS))
-                        .save(output, "craftable_rooted-dirt_from_grass-block_and_hanging-roots");
-                //Tulips
+                        .save(output, "craftable_frogspawn_from_slime-ball_lily-pad_and_water-bucket");
+                shaped(RecipeCategory.DECORATIONS, Items.SPORE_BLOSSOM, 2)
+                        .pattern("PMP")
+                        .pattern("MGM")
+                        .pattern("PMP")
+                        .define('P', Items.PINK_TULIP)
+                        .define('M', Items.MOSS_BLOCK)
+                        .define('G', Items.GLOW_BERRIES)
+                        .unlockedBy(getHasName(Items.PINK_TULIP), has(Items.PINK_TULIP))
+                        .unlockedBy(getHasName(Items.MOSS_BLOCK), has(Items.MOSS_BLOCK))
+                        .unlockedBy(getHasName(Items.GLOW_BERRIES), has(Items.GLOW_BERRIES))
+                        .save(output, "craftable_spore-blossom_from_glow-berries_pink_tulips_and_moss-blocks");
+            }
+            private void buildTulipRecipes() {
                 shapeless(RecipeCategory.DECORATIONS, Items.WHITE_TULIP, 1)
                         .requires(CraftableTags.WHITE_TULIP_BASE)
                         .requires(Items.WHITE_DYE)
@@ -905,65 +979,16 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.PINK_TULIP), has(Items.PINK_TULIP))
                         .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
                         .save(output, "craftable_red-tulip_from_red-dye_and_tulip");
-                //etc
-                shapeless(RecipeCategory.MISC, Items.GLOW_INK_SAC, 1)
-                        .requires(Items.INK_SAC)
-                        .requires(Items.GLOWSTONE_DUST)
-                        .unlockedBy(getHasName(Items.INK_SAC), has(Items.INK_SAC))
-                        .unlockedBy(getHasName(Items.GLOWSTONE_DUST), has(Items.GLOWSTONE_DUST))
-                        .save(output, "craftable_glow-ink-sac_from_ink-sac_and_glowstone-dust");
-                shapeless(RecipeCategory.FOOD, Items.GLOW_BERRIES, 1)
-                        .requires(Items.SWEET_BERRIES)
-                        .requires(Items.GLOWSTONE_DUST)
-                        .unlockedBy(getHasName(Items.SWEET_BERRIES), has(Items.SWEET_BERRIES))
-                        .unlockedBy(getHasName(Items.GLOWSTONE_DUST), has(Items.GLOWSTONE_DUST))
-                        .save(output, "craftable_glow-berries_from_sweet-berries_and_glowstone-dust");
-                shapeless(RecipeCategory.DECORATIONS, Items.CALCITE, 1)
-                        .requires(Items.DIORITE)
-                        .requires(Items.BONE_MEAL)
-                        .unlockedBy(getHasName(Items.DIORITE), has(Items.DIORITE))
-                        .unlockedBy(getHasName(Items.BONE_MEAL), has(Items.BONE_MEAL))
-                        .save(output, "craftable_calcite_from_diorite_and_bone-meal");
-                shapeless(RecipeCategory.DECORATIONS, Items.WET_SPONGE, 1)
-                        .requires(Items.SPONGE)
-                        .requires(Items.WATER_BUCKET)
-                        .unlockedBy(getHasName(Items.SPONGE), has(Items.SPONGE))
-                        .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
-                        .save(output, "craftable_wet-sponge_from_sponge_and_water-bucket");
-                shapeless(RecipeCategory.MISC, Items.GLOWSTONE_DUST, 1)
-                        .requires(Items.GLOW_BERRIES)
-                        .unlockedBy(getHasName(Items.GLOW_BERRIES), has(Items.GLOW_BERRIES))
-                        .save(output, "craftable_glowstone-dust_from_glow-berries");
+            }
+            private void buildThrowableItemRecipes() {
                 shapeless(RecipeCategory.MISC, Items.EXPERIENCE_BOTTLE, 1)
                         .requires(Items.SPLASH_POTION)
                         .requires(Items.DRAGON_BREATH)
                         .unlockedBy(getHasName(Items.SPLASH_POTION), has(Items.SPLASH_POTION))
                         .unlockedBy(getHasName(Items.DRAGON_BREATH), has(Items.DRAGON_BREATH))
                         .save(output, "craftable_experience-bottle_from_splash-potion_and_dragon-breath");
-                shapeless(RecipeCategory.MISC, Items.STRING, 4)
-                        .requires(Items.WHITE_WOOL)
-                        .unlockedBy(getHasName(Items.WHITE_WOOL), has(Items.WHITE_WOOL))
-                        .save(output, "craftable_strings_from_white-wool");
-                shapeless(RecipeCategory.DECORATIONS, Items.GILDED_BLACKSTONE, 1)
-                        .requires(Items.BLACKSTONE)
-                        .requires(Items.GOLD_NUGGET)
-                        .unlockedBy(getHasName(Items.BLACKSTONE), has(Items.BLACKSTONE))
-                        .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
-                        .save(output, "craftable_gilded-blackstone_from_blackstone_and_gold-nugget");
-                shapeless(RecipeCategory.DECORATIONS, Items.MYCELIUM, 1)
-                        .requires(Items.GRASS_BLOCK)
-                        .requires(CraftableTags.MUSHROOMS)
-                        .unlockedBy(getHasName(Items.GRASS_BLOCK), has(Items.GRASS_BLOCK))
-                        .save(output, "craftable_mycelium_from_grass-block_and_mushroom");
-                shapeless(RecipeCategory.DECORATIONS, Items.PODZOL, 1)
-                        .requires(Items.GRASS_BLOCK)
-                        .requires(Items.DARK_OAK_SAPLING)
-                        .unlockedBy(getHasName(Items.DARK_OAK_SAPLING), has(Items.DARK_OAK_SAPLING))
-                        .unlockedBy(getHasName(Items.GRASS_BLOCK), has(Items.GRASS_BLOCK))
-                        .save(output, "craftable_podzol_from_grass-block_and_dark-oak-sapling");
-
-                //---End of etc---
-                //Infested Blocks
+            }
+            private void buildInfestedBlockRecipes() {
                 shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_STONE, 1)
                         .requires(Items.STONE)
                         .requires(Items.SPIDER_EYE)
@@ -991,7 +1016,7 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_CRACKED_STONE_BRICKS, 1)
                         .requires(Items.CRACKED_STONE_BRICKS)
                         .requires(Items.SPIDER_EYE)
-                        .unlockedBy(getHasName(Items.STONE), has(Items.STONE))
+                        .unlockedBy(getHasName(Items.CRACKED_STONE_BRICKS), has(Items.CRACKED_STONE_BRICKS))
                         .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
                         .save(output, "craftable_infested-cracked-stone-bricks_from_cracked-stone-bricks_and_spider-eye");
                 shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_CHISELED_STONE_BRICKS, 1)
@@ -1006,27 +1031,88 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.DEEPSLATE), has(Items.DEEPSLATE))
                         .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
                         .save(output, "craftable_infested-deepslate_from_deepslate_and_spider-eye");
-                //---End of Infested Blocks---
-
-                //Smelting & Blasting
+            }
+            private void buildRawBlockRecipes() {
                 List<ItemLike> COPPER_BLOCK_SMELTABLES = List.of(Items.RAW_COPPER_BLOCK);
                 List<ItemLike> IRON_BLOCK_SMELTABLES = List.of(Items.RAW_IRON_BLOCK, Items.ANVIL, Items.CHIPPED_ANVIL, Items.DAMAGED_ANVIL);
                 List<ItemLike> GOLD_BLOCK_SMELTABLES = List.of(Items.RAW_GOLD_BLOCK);
-                List<ItemLike> LEATHER_SMELTABLES = List.of(Items.ROTTEN_FLESH);
                 oreSmelting(COPPER_BLOCK_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.COPPER_BLOCK, 0.25f, 200, "copper_ingot");
                 oreBlasting(COPPER_BLOCK_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.COPPER_BLOCK, 0.25f, 100, "copper_ingot");
                 oreSmelting(IRON_BLOCK_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.IRON_BLOCK, 0.25f, 200, "iron_ingot");
                 oreBlasting(IRON_BLOCK_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.IRON_BLOCK, 0.25f, 100, "iron_ingot");
                 oreSmelting(GOLD_BLOCK_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.GOLD_BLOCK, 0.25f, 200, "gold_ingot");
                 oreBlasting(GOLD_BLOCK_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.GOLD_BLOCK, 0.25f, 100, "gold_ingot");
+            }
+            private void buildOtherSmeltableRecipes() {
+                List<ItemLike> LEATHER_SMELTABLES = List.of(Items.ROTTEN_FLESH);
                 oreSmelting(LEATHER_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, Items.LEATHER, 0.25f, 200, "leather");
                 oreBlasting(LEATHER_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, Items.LEATHER, 0.25f, 100, "leather");
-                //Smithing
+            }
+            private void buildNautilusArmorRecipes() {
+                shaped(RecipeCategory.COMBAT, Items.COPPER_NAUTILUS_ARMOR, 1)
+                        .pattern("CCC")
+                        .pattern("CNC")
+                        .pattern("CCC")
+                        .define('C', Items.COPPER_BLOCK)
+                        .define('N', Items.NAUTILUS_SHELL)
+                        .unlockedBy(getHasName(Items.COPPER_BLOCK), has(Items.COPPER_BLOCK))
+                        .unlockedBy(getHasName(Items.NAUTILUS_SHELL), has(Items.NAUTILUS_SHELL))
+                        .save(output, "craftable_copper-nautilus-armor_from_nautilus-shell_and_copper-blocks");
+                shaped(RecipeCategory.COMBAT, Items.IRON_NAUTILUS_ARMOR, 1)
+                        .pattern("III")
+                        .pattern("INI")
+                        .pattern("III")
+                        .define('I', Items.IRON_BLOCK)
+                        .define('N', Items.COPPER_NAUTILUS_ARMOR)
+                        .unlockedBy(getHasName(Items.IRON_BLOCK), has(Items.IRON_BLOCK))
+                        .unlockedBy(getHasName(Items.COPPER_NAUTILUS_ARMOR), has(Items.COPPER_NAUTILUS_ARMOR))
+                        .save(output, "craftable_iron-nautilus-armor_from_copper-nautilus-armor_and_iron-blocks");
+                shaped(RecipeCategory.COMBAT, Items.GOLDEN_NAUTILUS_ARMOR, 1)
+                        .pattern("GGG")
+                        .pattern("GNG")
+                        .pattern("GGG")
+                        .define('G', Items.GOLD_BLOCK)
+                        .define('N', Items.IRON_NAUTILUS_ARMOR)
+                        .unlockedBy(getHasName(Items.GOLD_BLOCK), has(Items.GOLD_BLOCK))
+                        .unlockedBy(getHasName(Items.IRON_NAUTILUS_ARMOR), has(Items.IRON_NAUTILUS_ARMOR))
+                        .save(output, "craftable_golden-nautilus-armor_from_iron-nautilus-armor_and_gold-blocks");
+                shaped(RecipeCategory.COMBAT, Items.DIAMOND_NAUTILUS_ARMOR, 1)
+                        .pattern("DDD")
+                        .pattern("DND")
+                        .pattern("DDD")
+                        .define('D', Items.DIAMOND_BLOCK)
+                        .define('N', Items.GOLDEN_NAUTILUS_ARMOR)
+                        .unlockedBy(getHasName(Items.DIAMOND_BLOCK), has(Items.DIAMOND_BLOCK))
+                        .unlockedBy(getHasName(Items.GOLDEN_NAUTILUS_ARMOR), has(Items.GOLDEN_NAUTILUS_ARMOR))
+                        .save(output, "craftable_diamond-nautilus-armor_from_golden-nautilus-armor_and_diamond-blocks");
+            }
 
+            @Override
+            public void buildRecipes() {
+                buildChainmailRecipes();
+                buildFoodRecipes();
+                buildComponentRecipes();
+                buildDecorativeBlockRecipes();
+                buildCombatRecipes();
+                buildAmethystRecipes();
+                buildCoralRecipes();
+                buildFroglightRecipes();
+                buildMusicDiscs();
+                buildHeadRecipes();
+                buildSherdRecipes();
+                buildHorseArmorRecipes();
+                buildCopperItemRecipes();
+                buildMushroomItemRecipes();
+                buildSmallDecorativeItemRecipes();
+                buildTulipRecipes();
+                buildThrowableItemRecipes();
+                buildInfestedBlockRecipes();
+                buildRawBlockRecipes();
+                buildOtherSmeltableRecipes();
+                buildNautilusArmorRecipes();
             }
         };
     }
-
     @Override
     public String getName() {
         return "Craftable: Recipes"; //it should be unique

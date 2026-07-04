@@ -3,13 +3,14 @@
   "category": "misc",
   "key": {
     "A": "minecraft:apple",
+    "D": "minecraft:dragon_breath",
     "G": "minecraft:gold_block",
     "T": "minecraft:totem_of_undying"
   },
   "pattern": [
     "GTG",
     "GAG",
-    "GTG"
+    "GDG"
   ],
   "result": {
     "id": "minecraft:enchanted_golden_apple"

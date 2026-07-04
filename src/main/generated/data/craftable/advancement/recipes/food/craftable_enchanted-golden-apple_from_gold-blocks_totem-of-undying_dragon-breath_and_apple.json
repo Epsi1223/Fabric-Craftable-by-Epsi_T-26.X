@@ -1,41 +1,31 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blaze_rod": {
+    "has_apple": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:blaze_rod"
+            "items": "minecraft:apple"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_charcoal": {
+    "has_dragon_breath": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:charcoal"
+            "items": "minecraft:dragon_breath"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_magma_block": {
+    "has_gold_block": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:magma_block"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_sand": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:sand"
+            "items": "minecraft:gold_block"
           }
         ]
       },
@@ -43,23 +33,33 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "craftable:craftable_gunpowder_from_sand_blaze-rods_charcoal_and_magma"
+        "recipe": "craftable:craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_apple"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_totem_of_undying": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:totem_of_undying"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_sand",
-      "has_charcoal",
-      "has_magma_block",
-      "has_blaze_rod"
+      "has_apple",
+      "has_gold_block",
+      "has_totem_of_undying",
+      "has_dragon_breath"
     ]
   ],
   "rewards": {
     "recipes": [
-      "craftable:craftable_gunpowder_from_sand_blaze-rods_charcoal_and_magma"
+      "craftable:craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_apple"
     ]
   }
 }

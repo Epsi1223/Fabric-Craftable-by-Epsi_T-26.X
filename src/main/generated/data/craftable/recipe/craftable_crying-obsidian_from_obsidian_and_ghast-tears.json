@@ -6,12 +6,11 @@
     "O": "minecraft:obsidian"
   },
   "pattern": [
-    "GGG",
+    " G ",
     "GOG",
-    "GGG"
+    " G "
   ],
   "result": {
-    "count": 4,
     "id": "minecraft:crying_obsidian"
   }
 }

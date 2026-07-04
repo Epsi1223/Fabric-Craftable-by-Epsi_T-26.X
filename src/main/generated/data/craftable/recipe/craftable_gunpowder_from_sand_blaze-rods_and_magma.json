@@ -3,17 +3,16 @@
   "category": "misc",
   "key": {
     "B": "minecraft:blaze_rod",
-    "C": "minecraft:charcoal",
     "M": "minecraft:magma_block",
     "S": "minecraft:sand"
   },
   "pattern": [
     "BSB",
-    "CMC",
+    "SMS",
     "BSB"
   ],
   "result": {
-    "count": 4,
+    "count": 3,
     "id": "minecraft:gunpowder"
   }
 }

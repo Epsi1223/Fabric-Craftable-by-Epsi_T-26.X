@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": "minecraft:iron_block",
+    "N": "minecraft:copper_nautilus_armor"
+  },
+  "pattern": [
+    "III",
+    "INI",
+    "III"
+  ],
+  "result": {
+    "id": "minecraft:iron_nautilus_armor"
+  }
+}

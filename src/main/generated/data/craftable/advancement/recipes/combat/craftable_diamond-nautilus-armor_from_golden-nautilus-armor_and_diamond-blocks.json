@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cracked_stone_bricks": {
+    "has_diamond_block": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cracked_stone_bricks"
+            "items": "minecraft:diamond_block"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_spider_eye": {
+    "has_golden_nautilus_armor": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:spider_eye"
+            "items": "minecraft:golden_nautilus_armor"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "craftable:craftable_infested-cracked-stone-bricks_from_cracked-stone-bricks_and_spider-eye"
+        "recipe": "craftable:craftable_diamond-nautilus-armor_from_golden-nautilus-armor_and_diamond-blocks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cracked_stone_bricks",
-      "has_spider_eye"
+      "has_diamond_block",
+      "has_golden_nautilus_armor"
     ]
   ],
   "rewards": {
     "recipes": [
-      "craftable:craftable_infested-cracked-stone-bricks_from_cracked-stone-bricks_and_spider-eye"
+      "craftable:craftable_diamond-nautilus-armor_from_golden-nautilus-armor_and_diamond-blocks"
     ]
   }
 }

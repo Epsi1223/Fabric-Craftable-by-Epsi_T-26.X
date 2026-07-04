@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": "minecraft:gold_block",
+    "N": "minecraft:iron_nautilus_armor"
+  },
+  "pattern": [
+    "GGG",
+    "GNG",
+    "GGG"
+  ],
+  "result": {
+    "id": "minecraft:golden_nautilus_armor"
+  }
+}
