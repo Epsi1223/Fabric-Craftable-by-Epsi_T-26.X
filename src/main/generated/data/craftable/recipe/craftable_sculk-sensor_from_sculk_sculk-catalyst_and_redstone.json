@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:sculk_catalyst",
+    "R": "minecraft:redstone",
+    "S": "minecraft:sculk"
+  },
+  "pattern": [
+    "SSS",
+    "SCS",
+    "RRR"
+  ],
+  "result": {
+    "id": "minecraft:sculk_sensor"
+  }
+}

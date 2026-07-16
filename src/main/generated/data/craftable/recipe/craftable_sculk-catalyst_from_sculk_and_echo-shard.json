@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "minecraft:echo_shard",
+    "S": "minecraft:sculk"
+  },
+  "pattern": [
+    "SSS",
+    "SES",
+    "SSS"
+  ],
+  "result": {
+    "id": "minecraft:sculk_catalyst"
+  }
+}

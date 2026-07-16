@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_bottle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glass_bottle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_honeycomb_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:honeycomb_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_honey-bottle_from_glass-bottle_and_honeycomb-block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glass_bottle",
+      "has_honeycomb_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_honey-bottle_from_glass-bottle_and_honeycomb-block"
+    ]
+  }
+}

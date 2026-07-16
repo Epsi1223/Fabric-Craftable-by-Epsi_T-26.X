@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:sculk_sensor",
+    "B": "minecraft:bone_block",
+    "S": "minecraft:soul_sand"
+  },
+  "pattern": [
+    "BBB",
+    "SAS",
+    "SSS"
+  ],
+  "result": {
+    "id": "minecraft:sculk_shrieker"
+  }
+}
