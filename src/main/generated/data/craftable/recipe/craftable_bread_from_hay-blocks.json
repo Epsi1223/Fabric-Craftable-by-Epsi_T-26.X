@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "minecraft:hay_block"
+  },
+  "pattern": [
+    "WWW"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:bread"
+  }
+}

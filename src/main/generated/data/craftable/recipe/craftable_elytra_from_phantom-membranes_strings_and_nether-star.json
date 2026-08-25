@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": "minecraft:end_crystal",
+    "N": "minecraft:nether_star",
     "P": "minecraft:phantom_membrane",
-    "R": "minecraft:end_rod"
+    "S": "minecraft:string"
   },
   "pattern": [
-    "PEP",
-    "PRP",
+    "SNS",
+    "P P",
     "P P"
   ],
   "result": {

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fermented_spider_eye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fermented_spider_eye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mossy_stone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:mossy_stone_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_infested-mossy-stone-bricks_from_fermented-spider-eyes_and_mossy-stone-bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fermented_spider_eye",
+      "has_mossy_stone_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_infested-mossy-stone-bricks_from_fermented-spider-eyes_and_mossy-stone-bricks"
+    ]
+  }
+}

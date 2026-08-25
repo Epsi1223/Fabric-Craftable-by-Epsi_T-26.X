@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_spider_eye": {
+    "has_fermented_spider_eye": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:spider_eye"
+            "items": "minecraft:fermented_spider_eye"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "craftable:craftable_infested-chiseled-stone-bricks_from_chiseled-stone-bricks_and_spider-eye"
+        "recipe": "craftable:craftable_infested-chiseled-stone-bricks_from_fermented-spider-eyes_and_chiseled-stone-bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_chiseled_stone_bricks",
-      "has_spider_eye"
+      "has_fermented_spider_eye",
+      "has_chiseled_stone_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "craftable:craftable_infested-chiseled-stone-bricks_from_chiseled-stone-bricks_and_spider-eye"
+      "craftable:craftable_infested-chiseled-stone-bricks_from_fermented-spider-eyes_and_chiseled-stone-bricks"
     ]
   }
 }

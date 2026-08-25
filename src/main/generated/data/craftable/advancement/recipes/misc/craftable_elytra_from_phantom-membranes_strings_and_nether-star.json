@@ -1,21 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_end_crystal": {
+    "has_nether_star": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:end_crystal"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_end_rod": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:end_rod"
+            "items": "minecraft:nether_star"
           }
         ]
       },
@@ -31,9 +21,19 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_string": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:string"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "craftable:craftable_elytra_from_end-crystal_phantom-membranes_and_end-rod"
+        "recipe": "craftable:craftable_elytra_from_phantom-membranes_strings_and_nether-star"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -42,13 +42,13 @@
     [
       "has_the_recipe",
       "has_phantom_membrane",
-      "has_end_crystal",
-      "has_end_rod"
+      "has_nether_star",
+      "has_string"
     ]
   ],
   "rewards": {
     "recipes": [
-      "craftable:craftable_elytra_from_end-crystal_phantom-membranes_and_end-rod"
+      "craftable:craftable_elytra_from_phantom-membranes_strings_and_nether-star"
     ]
   }
 }

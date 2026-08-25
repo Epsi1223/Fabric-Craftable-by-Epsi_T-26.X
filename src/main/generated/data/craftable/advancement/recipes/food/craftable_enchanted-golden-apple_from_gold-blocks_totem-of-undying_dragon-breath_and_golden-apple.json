@@ -1,16 +1,6 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:apple"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_dragon_breath": {
       "conditions": {
         "items": [
@@ -31,9 +21,19 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_golden_apple": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:golden_apple"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "craftable:craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_apple"
+        "recipe": "craftable:craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_golden-apple"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -51,7 +51,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_apple",
+      "has_golden_apple",
       "has_gold_block",
       "has_totem_of_undying",
       "has_dragon_breath"
@@ -59,7 +59,7 @@
   ],
   "rewards": {
     "recipes": [
-      "craftable:craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_apple"
+      "craftable:craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_golden-apple"
     ]
   }
 }

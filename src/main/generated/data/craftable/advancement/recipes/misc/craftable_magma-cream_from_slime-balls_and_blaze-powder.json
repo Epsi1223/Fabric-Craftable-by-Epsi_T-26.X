@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_spider_eye": {
+    "has_blaze_powder": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:spider_eye"
+            "items": "minecraft:blaze_powder"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stone": {
+    "has_slime_ball": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stone"
+            "items": "minecraft:slime_ball"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "craftable:craftable_infested-stone_from_stone_and_spider-eye"
+        "recipe": "craftable:craftable_magma-cream_from_slime-balls_and_blaze-powder"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stone",
-      "has_spider_eye"
+      "has_slime_ball",
+      "has_blaze_powder"
     ]
   ],
   "rewards": {
     "recipes": [
-      "craftable:craftable_infested-stone_from_stone_and_spider-eye"
+      "craftable:craftable_magma-cream_from_slime-balls_and_blaze-powder"
     ]
   }
 }

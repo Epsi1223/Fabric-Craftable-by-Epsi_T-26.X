@@ -85,14 +85,14 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                             .pattern("GAG")
                             .pattern("GDG")
                             .define('G', Items.GOLD_BLOCK)
-                            .define('A', Items.APPLE)
+                            .define('A', Items.GOLDEN_APPLE)
                             .define('T', Items.TOTEM_OF_UNDYING)
                             .define('D', Items.DRAGON_BREATH)
-                            .unlockedBy(getHasName(Items.APPLE), has(Items.APPLE))
+                            .unlockedBy(getHasName(Items.GOLDEN_APPLE), has(Items.GOLDEN_APPLE))
                             .unlockedBy(getHasName(Items.GOLD_BLOCK), has(Items.GOLD_BLOCK))
                             .unlockedBy(getHasName(Items.TOTEM_OF_UNDYING), has(Items.TOTEM_OF_UNDYING))
                             .unlockedBy(getHasName(Items.DRAGON_BREATH), has(Items.DRAGON_BREATH))
-                            .save(output, "craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_apple");
+                            .save(output, "craftable_enchanted-golden-apple_from_gold-blocks_totem-of-undying_dragon-breath_and_golden-apple");
                     shaped(RecipeCategory.FOOD, Items.POISONOUS_POTATO, 2)
                             .pattern("PFP")
                             .define('P', Items.POTATO)
@@ -346,16 +346,16 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
                         .save(output, "craftable_totem-of-undying_from_gold-blocks_emeralds_and_nether-star");
                 shaped(RecipeCategory.MISC, Items.ELYTRA, 1)
-                        .pattern("PEP")
-                        .pattern("PRP")
+                        .pattern("SNS")
                         .pattern("P P")
-                        .define('R', Items.END_ROD)
+                        .pattern("P P")
                         .define('P', Items.PHANTOM_MEMBRANE)
-                        .define('E', Items.END_CRYSTAL)
+                        .define('N', Items.NETHER_STAR)
+                        .define('S', Items.STRING)
                         .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE), has(Items.PHANTOM_MEMBRANE))
-                        .unlockedBy(getHasName(Items.END_CRYSTAL), has(Items.END_CRYSTAL))
-                        .unlockedBy(getHasName(Items.END_ROD), has(Items.END_ROD))
-                        .save(output, "craftable_elytra_from_end-crystal_phantom-membranes_and_end-rod");
+                        .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
+                        .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                        .save(output, "craftable_elytra_from_phantom-membranes_strings_and_nether-star");
             }
             private void buildAmethystRecipes() {
                 shaped(RecipeCategory.COMBAT, Items.BUDDING_AMETHYST, 1)
@@ -994,48 +994,69 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .save(output, "craftable_experience-bottle_from_splash-potion_and_dragon-breath");
             }
             private void buildInfestedBlockRecipes() {
-                shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_STONE, 1)
-                        .requires(Items.STONE)
-                        .requires(Items.SPIDER_EYE)
+                shaped(RecipeCategory.DECORATIONS, Items.INFESTED_STONE, 1)
+                        .pattern("EEE")
+                        .pattern("ESE")
+                        .pattern("EEE")
+                        .define('E', Items.FERMENTED_SPIDER_EYE)
+                        .define('S', Items.STONE)
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
                         .unlockedBy(getHasName(Items.STONE), has(Items.STONE))
-                        .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
-                        .save(output, "craftable_infested-stone_from_stone_and_spider-eye");
-                shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_COBBLESTONE, 1)
-                        .requires(Items.COBBLESTONE)
-                        .requires(Items.SPIDER_EYE)
+                        .save(output, "craftable_infested-stone_from_fermented-spider-eyes_and_stone");
+                shaped(RecipeCategory.DECORATIONS, Items.INFESTED_COBBLESTONE, 1)
+                        .pattern("EEE")
+                        .pattern("ESE")
+                        .pattern("EEE")
+                        .define('E', Items.FERMENTED_SPIDER_EYE)
+                        .define('S', Items.COBBLESTONE)
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
                         .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
-                        .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
-                        .save(output, "craftable_infested-cobblestone_from_cobblestone_and_spider-eye");
-                shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_STONE_BRICKS, 1)
-                        .requires(Items.STONE_BRICKS)
-                        .requires(Items.SPIDER_EYE)
+                        .save(output, "craftable_infested-cobblestone_from_fermented-spider-eyes_and_cobblestone");
+                shaped(RecipeCategory.DECORATIONS, Items.INFESTED_STONE_BRICKS, 1)
+                        .pattern("EEE")
+                        .pattern("ESE")
+                        .pattern("EEE")
+                        .define('E', Items.FERMENTED_SPIDER_EYE)
+                        .define('S', Items.STONE_BRICKS)
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
                         .unlockedBy(getHasName(Items.STONE_BRICKS), has(Items.STONE_BRICKS))
-                        .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
-                        .save(output, "craftable_infested-stone-bricks_from_stone-bricks_and_spider-eye");
-                shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_MOSSY_STONE_BRICKS, 1)
-                        .requires(Items.MOSSY_STONE_BRICKS)
-                        .requires(Items.SPIDER_EYE)
+                        .save(output, "craftable_infested-stone-bricks_from_fermented-spider-eyes_and_stone-bricks");
+                shaped(RecipeCategory.DECORATIONS, Items.INFESTED_MOSSY_STONE_BRICKS, 1)
+                        .pattern("EEE")
+                        .pattern("ESE")
+                        .pattern("EEE")
+                        .define('E', Items.FERMENTED_SPIDER_EYE)
+                        .define('S', Items.MOSSY_STONE_BRICKS)
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
                         .unlockedBy(getHasName(Items.MOSSY_STONE_BRICKS), has(Items.MOSSY_STONE_BRICKS))
-                        .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
-                        .save(output, "craftable_infested-mossy-stone-bricks_from_mossy-stone-bricks_and_spider-eye");
-                shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_CRACKED_STONE_BRICKS, 1)
-                        .requires(Items.CRACKED_STONE_BRICKS)
-                        .requires(Items.SPIDER_EYE)
+                        .save(output, "craftable_infested-mossy-stone-bricks_from_fermented-spider-eyes_and_mossy-stone-bricks");
+                shaped(RecipeCategory.DECORATIONS, Items.INFESTED_CRACKED_STONE_BRICKS, 1)
+                        .pattern("EEE")
+                        .pattern("ESE")
+                        .pattern("EEE")
+                        .define('E', Items.FERMENTED_SPIDER_EYE)
+                        .define('S', Items.CRACKED_STONE_BRICKS)
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
                         .unlockedBy(getHasName(Items.CRACKED_STONE_BRICKS), has(Items.CRACKED_STONE_BRICKS))
-                        .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
-                        .save(output, "craftable_infested-cracked-stone-bricks_from_cracked-stone-bricks_and_spider-eye");
-                shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_CHISELED_STONE_BRICKS, 1)
-                        .requires(Items.CHISELED_STONE_BRICKS)
-                        .requires(Items.SPIDER_EYE)
+                        .save(output, "craftable_infested-cracked-stone-bricks_from_fermented-spider-eyes_and_cracked-stone-bricks");
+                shaped(RecipeCategory.DECORATIONS, Items.INFESTED_CHISELED_STONE_BRICKS, 1)
+                        .pattern("EEE")
+                        .pattern("ESE")
+                        .pattern("EEE")
+                        .define('E', Items.FERMENTED_SPIDER_EYE)
+                        .define('S', Items.CHISELED_STONE_BRICKS)
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
                         .unlockedBy(getHasName(Items.CHISELED_STONE_BRICKS), has(Items.CHISELED_STONE_BRICKS))
-                        .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
-                        .save(output, "craftable_infested-chiseled-stone-bricks_from_chiseled-stone-bricks_and_spider-eye");
-                shapeless(RecipeCategory.DECORATIONS, Items.INFESTED_DEEPSLATE, 1)
-                        .requires(Items.DEEPSLATE)
-                        .requires(Items.SPIDER_EYE)
+                        .save(output, "craftable_infested-chiseled-stone-bricks_from_fermented-spider-eyes_and_chiseled-stone-bricks");
+                shaped(RecipeCategory.DECORATIONS, Items.INFESTED_DEEPSLATE, 1)
+                        .pattern("EEE")
+                        .pattern("ESE")
+                        .pattern("EEE")
+                        .define('E', Items.FERMENTED_SPIDER_EYE)
+                        .define('S', Items.DEEPSLATE)
+                        .unlockedBy(getHasName(Items.FERMENTED_SPIDER_EYE), has(Items.FERMENTED_SPIDER_EYE))
                         .unlockedBy(getHasName(Items.DEEPSLATE), has(Items.DEEPSLATE))
-                        .unlockedBy(getHasName(Items.SPIDER_EYE), has(Items.SPIDER_EYE))
-                        .save(output, "craftable_infested-deepslate_from_deepslate_and_spider-eye");
+                        .save(output, "craftable_infested-deepslate_from_fermented-spider-eyes_and_deepslate");
             }
             private void buildRawBlockRecipes() {
                 List<ItemLike> COPPER_BLOCK_SMELTABLES = List.of(Items.RAW_COPPER_BLOCK);
@@ -1124,6 +1145,40 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.SOUL_SAND), has(Items.SOUL_SAND))
                         .save(output, "craftable_sculk-shrieker_from_bone-blocks_soul-sand_and_sculk-sensor");
             }
+            private void buildSlimeRelatedItems() {
+                shapeless(RecipeCategory.MISC, Items.MAGMA_CREAM, 1)
+                        .requires(Items.SLIME_BALL, 3)
+                        .requires(Items.BLAZE_POWDER)
+                        .unlockedBy(getHasName(Items.SLIME_BALL), has(Items.SLIME_BALL))
+                        .unlockedBy(getHasName(Items.BLAZE_POWDER), has(Items.BLAZE_POWDER))
+                        .save(output, "craftable_magma-cream_from_slime-balls_and_blaze-powder");
+                shapeless(RecipeCategory.MISC, Items.SLIME_BALL, 1)
+                        .requires(Items.MAGMA_CREAM, 3)
+                        .requires(Items.WATER_BUCKET)
+                        .unlockedBy(getHasName(Items.MAGMA_CREAM), has(Items.MAGMA_CREAM))
+                        .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
+                        .save(output, "craftable_slime-ball_from_magma-cream_and_water-bucket");
+            }
+            private void buildMossRelatedItems() {
+                shaped(RecipeCategory.DECORATIONS, Items.MOSS_BLOCK, 1)
+                        .pattern(" C ")
+                        .pattern("CDC")
+                        .pattern("GCG")
+                        .define('C', Items.MOSS_CARPET)
+                        .define('D', Items.GRASS_BLOCK)
+                        .define('G', Items.GLOW_BERRIES)
+                        .unlockedBy(getHasName(Items.MOSS_CARPET), has(Items.MOSS_CARPET))
+                        .unlockedBy(getHasName(Items.DIRT), has(Items.DIRT))
+                        .unlockedBy(getHasName(Items.GLOW_BERRIES), has(Items.GLOW_BERRIES))
+                        .save(output, "craftable_moss-block_from_moss-carpets_glow-berries_and_grass-block");
+            }
+            private void buildQuickCraftingRecipes() {
+                shaped(RecipeCategory.FOOD, Items.BREAD, 9)
+                        .pattern("WWW")
+                        .define('W', Items.HAY_BLOCK)
+                        .unlockedBy(getHasName(Items.HAY_BLOCK), has(Items.HAY_BLOCK))
+                        .save(output, "craftable_bread_from_hay-blocks");
+            }
 
             @Override
             public void buildRecipes() {
@@ -1149,6 +1204,8 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 buildOtherSmeltableRecipes();
                 buildNautilusArmorRecipes();
                 buildSculkRelatedRecipes();
+                buildSlimeRelatedItems();
+                buildQuickCraftingRecipes();
             }
         };
     }

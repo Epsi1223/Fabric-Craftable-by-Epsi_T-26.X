@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mossy_stone_bricks": {
+    "has_cracked_stone_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:mossy_stone_bricks"
+            "items": "minecraft:cracked_stone_bricks"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_spider_eye": {
+    "has_fermented_spider_eye": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:spider_eye"
+            "items": "minecraft:fermented_spider_eye"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "craftable:craftable_infested-mossy-stone-bricks_from_mossy-stone-bricks_and_spider-eye"
+        "recipe": "craftable:craftable_infested-cracked-stone-bricks_from_fermented-spider-eyes_and_cracked-stone-bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mossy_stone_bricks",
-      "has_spider_eye"
+      "has_fermented_spider_eye",
+      "has_cracked_stone_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "craftable:craftable_infested-mossy-stone-bricks_from_mossy-stone-bricks_and_spider-eye"
+      "craftable:craftable_infested-cracked-stone-bricks_from_fermented-spider-eyes_and_cracked-stone-bricks"
     ]
   }
 }

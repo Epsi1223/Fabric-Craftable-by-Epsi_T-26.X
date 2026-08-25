@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:magma_cream",
+    "minecraft:magma_cream",
+    "minecraft:magma_cream",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "minecraft:slime_ball"
+  }
+}

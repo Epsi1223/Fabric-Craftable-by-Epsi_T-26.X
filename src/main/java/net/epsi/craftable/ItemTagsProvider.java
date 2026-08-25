@@ -46,5 +46,16 @@ public class ItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(CraftableTags.MUSHROOMS)
                 .add(Items.BROWN_MUSHROOM)
                 .add(Items.RED_MUSHROOM);
+        valueLookupBuilder(CraftableTags.LEAVES)
+                .add(Items.OAK_LEAVES)
+                .add(Items.SPRUCE_LEAVES)
+                .add(Items.BIRCH_LEAVES)
+                .add(Items.JUNGLE_LEAVES)
+                .add(Items.ACACIA_LEAVES)
+                .add(Items.DARK_OAK_LEAVES)
+                .add(Items.MANGROVE_LEAVES)
+                .add(Items.CHERRY_LEAVES)
+                .add(Items.AZALEA_LEAVES)
+                .add(Items.PALE_OAK_LEAVES);
     }
 }

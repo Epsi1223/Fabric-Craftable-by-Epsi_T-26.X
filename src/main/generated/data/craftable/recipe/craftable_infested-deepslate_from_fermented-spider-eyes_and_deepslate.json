@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "minecraft:fermented_spider_eye",
+    "S": "minecraft:deepslate"
+  },
+  "pattern": [
+    "EEE",
+    "ESE",
+    "EEE"
+  ],
+  "result": {
+    "id": "minecraft:infested_deepslate"
+  }
+}

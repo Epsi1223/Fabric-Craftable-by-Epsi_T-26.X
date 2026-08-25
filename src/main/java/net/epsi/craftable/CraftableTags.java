@@ -30,4 +30,8 @@ public class CraftableTags {
             Registries.ITEM,
             Identifier.fromNamespaceAndPath("craftable", "mushrooms")
     );
+    public static final TagKey<Item> LEAVES = TagKey.create(
+            Registries.ITEM,
+            Identifier.fromNamespaceAndPath("craftable", "leaves")
+    );
 }
