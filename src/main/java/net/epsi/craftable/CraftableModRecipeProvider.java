@@ -1206,6 +1206,7 @@ public class CraftableModRecipeProvider extends FabricRecipeProvider {
                 buildSculkRelatedRecipes();
                 buildSlimeRelatedItems();
                 buildQuickCraftingRecipes();
+                buildMossRelatedItems();
             }
         };
     }

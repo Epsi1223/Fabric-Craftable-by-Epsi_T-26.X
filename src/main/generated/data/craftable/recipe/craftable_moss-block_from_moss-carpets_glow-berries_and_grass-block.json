@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:moss_carpet",
+    "D": "minecraft:grass_block",
+    "G": "minecraft:glow_berries"
+  },
+  "pattern": [
+    " C ",
+    "CDC",
+    "GCG"
+  ],
+  "result": {
+    "id": "minecraft:moss_block"
+  }
+}

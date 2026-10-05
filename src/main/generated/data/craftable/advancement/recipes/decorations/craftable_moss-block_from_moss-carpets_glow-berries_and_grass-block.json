@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dirt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:dirt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_glow_berries": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glow_berries"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_moss_carpet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:moss_carpet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftable:craftable_moss-block_from_moss-carpets_glow-berries_and_grass-block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_moss_carpet",
+      "has_dirt",
+      "has_glow_berries"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftable:craftable_moss-block_from_moss-carpets_glow-berries_and_grass-block"
+    ]
+  }
+}
